@@ -33,7 +33,7 @@ public class TakeFilePathAndName {
 
         for(int i=0;i<array.length;i++)
         {   
-            if(array[i].isFile())//如果是文件
+            if(array[i].isFile())//是一个文件该方法返回true，否则该方法返回false
             { 
                 int indexOf = array[i].getName().indexOf(".java");
                 if (indexOf != -1) {
