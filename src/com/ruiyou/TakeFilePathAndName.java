@@ -40,7 +40,7 @@ public class TakeFilePathAndName {
                 	 System.out.println( array[i].getName());
                 	++ count;
                 }
-            }else if (array[i].isDirectory()) {	
+            }else if (array[i].isDirectory()) {	//是一个目录该方法返回true，否则该方法返回false
             	getFile(array[i].getPath());
             }
         }
