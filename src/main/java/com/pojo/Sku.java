@@ -7,7 +7,7 @@ public class Sku implements Serializable {
 
     private Long id;
     private String code;
-    private Integer price;
+    private String price;
     private String color;
     private Date fomatDate;
 
@@ -55,11 +55,11 @@ public class Sku implements Serializable {
         this.code = code;
     }
 
-    public Integer getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

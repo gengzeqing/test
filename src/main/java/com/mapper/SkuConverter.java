@@ -1,6 +1,7 @@
 package com.mapper;
 
 
+import com.mapper.mapperValidate.MyStringLongMapper;
 import com.pojo.Sku;
 import com.pojo.SkuDTO;
 import com.pojo.User;
@@ -19,7 +20,7 @@ import java.util.List;
  * 忽略不匹配的属性
  *     unmappedTargetPolicy = ReportingPolicy.IGNORE
  */
-@Mapper(nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
+@Mapper(nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS,uses = MyStringLongMapper.class)
 public interface SkuConverter {
 
     SkuConverter MAPPER = Mappers.getMapper(SkuConverter.class);
@@ -39,7 +40,7 @@ public interface SkuConverter {
             @Mapping(source = "code", target = "skuCode"),
             @Mapping(source = "price", target = "skuPrice"),
             // 该属性会被忽略不进行处理
-            @Mapping(target = "color", constant = "测试数据"),
+            //@Mapping(target = "color", constant = "测试数据"),
             // 时间类型进行格式化处理
             @Mapping(source = "fomatDate", target = "fomatDate", dateFormat = "yyyy-MM-dd HH:mm:ss")
     })

@@ -28,10 +28,12 @@ public class MapStruct {
 //        System.out.println(skuDTOS);
 
         Sku sku = new Sku();
-        sku.setPrice(12);
+        //sku.setPrice("12");
         sku.setColor("blue");
         sku.setCode("0134");
         SkuDTO skuDTO2 = SkuConverter.MAPPER.damin2dto(sku);
         System.out.println(skuDTO2);
+        String itemName = skuDTO2.getItemName();
+        System.out.println(itemName);
     }
 }
